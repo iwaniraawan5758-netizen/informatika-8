@@ -1,0 +1,6 @@
+{
+  "name": "INFORMATIKA 8 – LEVEL UP YOUR BRAIN!",
+  "description": "Media pembelajaran interaktif Informatika SMP kelas VIII dengan gamifikasi, aktivitas lab langsung, dan kuis evaluasi per bab.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

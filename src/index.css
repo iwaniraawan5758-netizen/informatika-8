@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #040717;
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.gaming-grid-bg {
+  background-color: #040717;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(56, 189, 248, 0.16), transparent 55%),
+    radial-gradient(circle at 12% 28%, rgba(139, 92, 246, 0.16), transparent 40%),
+    radial-gradient(circle at 88% 30%, rgba(236, 72, 153, 0.12), transparent 40%),
+    radial-gradient(ellipse at 50% 100%, rgba(34, 211, 238, 0.14), transparent 48%),
+    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 42px 42px, 42px 42px;
+}
+
+.glass-panel {
+  background: linear-gradient(160deg, rgba(12, 19, 48, 0.88), rgba(7, 11, 31, 0.92));
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  box-shadow: inset 0 1px 0 rgba(148, 163, 184, 0.1), 0 10px 30px -12px rgba(2, 6, 23, 0.85);
+}
+
+.glass-panel-elevated {
+  background: linear-gradient(165deg, rgba(15, 24, 60, 0.92), rgba(8, 13, 36, 0.95));
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(56, 189, 248, 0.38);
+  box-shadow:
+    inset 0 1px 0 rgba(125, 211, 252, 0.18),
+    0 16px 40px -14px rgba(2, 6, 23, 0.9),
+    0 0 28px -10px rgba(56, 189, 248, 0.28);
+}
+
+.hud-frame {
+  position: relative;
+  background: linear-gradient(170deg, rgba(10, 17, 45, 0.92), rgba(6, 10, 29, 0.96));
+  border: 1px solid rgba(56, 189, 248, 0.34);
+  box-shadow:
+    inset 0 0 24px rgba(56, 189, 248, 0.06),
+    0 0 22px -8px rgba(56, 189, 248, 0.32);
+}
+
+.hud-frame-purple {
+  border-color: rgba(168, 85, 247, 0.45);
+  box-shadow:
+    inset 0 0 24px rgba(168, 85, 247, 0.08),
+    0 0 22px -8px rgba(168, 85, 247, 0.38);
+}
+
+.hud-frame-amber {
+  border-color: rgba(250, 204, 21, 0.42);
+  box-shadow:
+    inset 0 0 24px rgba(250, 204, 21, 0.06),
+    0 0 22px -8px rgba(250, 204, 21, 0.3);
+}
+
+.hud-frame-emerald {
+  border-color: rgba(52, 211, 153, 0.42);
+  box-shadow:
+    inset 0 0 24px rgba(52, 211, 153, 0.06),
+    0 0 22px -8px rgba(52, 211, 153, 0.32);
+}
+
+.hud-frame-pink {
+  border-color: rgba(244, 114, 182, 0.42);
+  box-shadow:
+    inset 0 0 24px rgba(244, 114, 182, 0.06),
+    0 0 22px -8px rgba(244, 114, 182, 0.32);
+}
+
+.cockpit-console-glow {
+  box-shadow:
+    0 -6px 32px -6px rgba(56, 189, 248, 0.35),
+    0 0 40px -10px rgba(139, 92, 246, 0.45);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes hudPulseBorder {
+  0%, 100% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-hud-pulse {
+  animation: hudPulseBorder 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
